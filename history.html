@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Masquerade of a Lifetime</title>
+	<meta charset="etf-8">
+	<link rel="stylesheet" href="css/masquerade.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/masquerade-print.css" type="text/css" media="print">
+	<script>
+		/* Set the countdown date */	var countDownDate = new Date("Oct 13, 2018 19:00:00").getTime();
+		/* Update the clock every second */	var x = setInterval(function() {
+			/* Get the current date and time */	var now = new Date().getTime();
+			/* Find the distance between now and the final date */	var distance = countDownDate - now;
+			/* Calculate time for days */ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			/* Calculate time for hours */	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			/* Calculate time for minutes */	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			/* Calculate time for seconds */	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			/* Display the result in the element "clock" */	document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+			/* If the countdown is finished, write a message */	
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("clock").innerHTML = "The ball has passed, see you next year.";
+				}
+			}, 1000);
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="banner"><h1>95th Annual Talverton Masquerade</h1></div>
+		</header>
+		<div id="demo">
+			<nav><ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="details.html">Event Details</a></li>
+				<li><a class="active" href="history.html">Event History</a></li>
+				<li><a href="rsvp.html">RSVP</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="featureindex.html">Feature Index</a></li>
+			</ul></nav>
+			<aside>
+				<p>Greetings honored guest, the ball begins in</p>
+				<p id="clock"></p>
+			</aside>
+			<main>
+				<div id="mask">
+				</div>
+				<header><h2>History of the Talverton Masquerade</h2></header>
+				<p>The origin of the this great ball stretches back all the way to the creation of the Sencoss bloodline. What seems like a millenia ago, an elderly alchemist named 
+				Egyed Sencoss was experimenting to find agelessness for him and his grandson. When his home in the Talverton province entered into famine a stranger
+				convinced him to experiment with blood. Egyed and his sons trapped an angel, and using her blood, Egyed found what he was looking for. With his 
+				new decoction, Egyed gave his family line, and a specific few others access to immortality at the cost of an unnatural thirst for blood. Thus, the vampire race was 
+				born.</p>
+				<p>Since their rebirth, the Sencoss's have been hosting a masquerade ball, inviting their favored family lines as well as prominent citizens of the surrounding areas.
+				There has always been rumor of the Sencoss's dark secrets, but the reputation of the ball is enough to bring even the most skeptical of minds. Every year the 
+				Sencoss's push for a larger amount of attendees, this year they hope for an amount in the thousands. A brief history of attendees can be seen below.</p>
+				<table>
+				<caption>History of Masquerade Attendants</caption>
+					<thead>
+						<tr>
+							<th id="year">Year</th>
+							<th id="attendees">Number of Guests</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td headers="year">1455</td>
+							<td headers="attendees">149</td>
+						</tr>
+						<tr>
+							<td headers="year">1456</td>
+							<td headers="attendees">342</td>
+						</tr>
+						<tr>
+							<td headers="year">1457</td>
+							<td headers="attendees">563</td>
+						</tr>
+						<tr>
+							<td headers="year">...</td>
+							<td headers="attendees">...</td>
+						</tr>
+						<tr>
+							<td headers="year">1543</td>
+							<td headers="attendees">863</td>
+						</tr>
+						<tr>
+							<td headers="year">1544</td>
+							<td headers="attendees">961</td>
+						</tr>
+						<tr>
+							<td headers="year">1545</td>
+							<td headers="attendees">1000?</td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="mask">
+				</div>
+			</main>
+		</div>
+		<footer>
+			<div>
+				<audio autoplay="autoplay" controls="controls" loop="loop">
+					<source src="tubbers__waltz-carulli-partial.mp3" type="audio/mpeg">
+					<source src="tubbers__waltz-carulli-partial.ogg" type="audio/ogg">
+					Your browser does not support the audio element.
+				</audio><br>
+				<a href="index.html">HOME</a> / <a href="details.html">DETAILS</a> / <a href="history.html">HISTORY</a> / <a href="rsvp.html">RSVP</a> / <a href="contact.html">CONTACT US</a>
+			</div>
+		</footer>
+</body>	

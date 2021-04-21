@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Masquerade of a Lifetime</title>
+	<meta charset="etf-8">
+	<link rel="stylesheet" href="css/masquerade.css" type="text/css" media="screen">
+	<script>
+		function validateForm() {
+			if (document.forms[0].fname.value == "") {
+				alert("You must enter your first name.");
+				return false;
+			}
+			if (document.forms[0].lname.value == "") {
+				alert("You must enter your last name.");
+				return false;
+			}
+			if (document.forms[0].email.value == "") {
+				alert("You must enter your E-mail address.");
+				return false;
+			}
+			if (document.forms[0].subject.value == "") {
+				alert("You must enter a subject.");
+				return false;
+			}
+			if (document.forms[0].comment.value == "") {
+				alert("You must enter a comment.");
+				return false;
+			}
+		}	
+
+		/* Set the countdown date */	var countDownDate = new Date("Oct 13, 2018 19:00:00").getTime();
+		/* Update the clock every second */	var x = setInterval(function() {
+			/* Get the current date and time */	var now = new Date().getTime();
+			/* Find the distance between now and the final date */	var distance = countDownDate - now;
+			/* Calculate time for days */ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			/* Calculate time for hours */	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			/* Calculate time for minutes */	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			/* Calculate time for seconds */	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			/* Display the result in the element "clock" */	document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+			/* If the countdown is finished, write a message */	
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("clock").innerHTML = "The ball has passed, see you next year.";
+				}
+			}, 1000);
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="banner"><h1>95th Annual Talverton Masquerade</h1></div>
+		</header>
+		<div id="demo">
+			<nav><ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="details.html">Event Details</a></li>
+				<li><a href="history.html">Event History</a></li>
+				<li><a href="rsvp.html">RSVP</a></li>
+				<li><a class="active" href="contact.html">Contact Us</a></li>
+				<li><a href="featureindex.html">Feature Index</a></li>
+			</ul></nav>
+			<aside>
+				<p>Greetings honored guest, the ball begins in</p>
+				<p id="clock"></p>
+			</aside>
+			<main>
+				<div id="mask">
+				</div>
+				<p>To leave us a comment or RSVP online, please fill out this form.</p>
+				<form id="contact" method="post" name="contact" action="http://webdevbasics.net/scripts/demo.php" onsubmit="return validateForm();">
+					<label for="fname">First Name: </label><input type="text" name="fname" id="fname">
+					<label for="lname">Last Name: </label><input type="text" name="lname" id="lname">
+					<label for="email">E-mail: </label><input type="text" name="email" id="email">
+					<label for="subject">Subject: </label><input type="text" name="subject" id="subject">
+					<label for="comment">Comments: </label><textarea name="comment" id="comment" rows="6" columns="80"></textarea>
+					<input id="contactSubmit" type="submit">
+				</form>
+				<div id="mask">
+				</div>
+				<footer>
+					<div>
+						<audio autoplay="autoplay" controls="controls" loop="loop">
+							<source src="tubbers__waltz-carulli-partial.mp3" type="audio/mpeg">
+							<source src="tubbers__waltz-carulli-partial.ogg" type="audio/ogg">
+							Your browser does not support the audio element.
+						</audio><br>
+						<a href="index.html">HOME</a> / <a href="details.html">DETAILS</a> / <a href="history.html">HISTORY</a> / <a href="rsvp.html">RSVP</a> / <a href="contact.html">CONTACT US</a>
+					</div>
+				</footer>
+			</main>
+		</div>
+	</div>
+</body>	

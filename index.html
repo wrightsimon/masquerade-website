@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Masquerade of a Lifetime</title>
+	<meta charset="etf-8">
+	<link rel="stylesheet" href="css/masquerade.css" type="text/css" media="screen">
+	<script>
+		alert("You have been invited to the Talverton Masquerade! Welcome, honored guest.");
+		/* Set the countdown date */	var countDownDate = new Date("Oct 13, 2018 19:00:00").getTime();
+		/* Update the clock every second */	var x = setInterval(function() {
+			/* Get the current date and time */	var now = new Date().getTime();
+			/* Find the distance between now and the final date */	var distance = countDownDate - now;
+			/* Calculate time for days */ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			/* Calculate time for hours */	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			/* Calculate time for minutes */	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			/* Calculate time for seconds */	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			/* Display the result in the element "clock" */	document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+			/* If the countdown is finished, write a message */	
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("clock").innerHTML = "The ball has passed, see you next year.";
+				}
+			}, 1000);
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="banner"><h1>95th Annual Talverton Masquerade</h1></div>
+		</header>
+		<div id="demo">
+			<nav><ul>
+				<li><a class="active" href="index.html">Home</a></li>
+				<li><a href="details.html">Event Details</a></li>
+				<li><a href="history.html">Event History</a></li>
+				<li><a href="rsvp.html">RSVP</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="featureindex.html">Feature Index</a></li>
+			</ul></nav>
+			<aside>
+				<p>Greetings honored guest, the ball begins in</p>
+				<p id="clock"></p>
+			</aside>
+			<main>
+				<div id="mask">
+				</div>
+				<div><p>The Sencoss family is hosting its annual Talverton Masquerade ball. You're all invited to the most prestigious event of your lives. Once you come, you'll <span style="color: silver">never</span> want to <span style="color: silver">leave</span>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae rutrum augue, imperdiet auctor libero. Nam nisi lectus, bibendum consequat faucibus id, elementum eget justo. Phasellus imperdiet convallis tincidunt. Curabitur commodo euismod nulla, non tincidunt risus luctus id. Cras luctus dignissim velit sit amet condimentum. Maecenas ultrices laoreet maximus. Phasellus id rhoncus lacus. Quisque id imperdiet arcu, quis tincidunt metus. Sed vel tellus eget augue aliquam bibendum dictum a turpis. Mauris pulvinar vel ex sed mattis.</p>
+				<p>Sed libero urna, suscipit nec lacus quis, rhoncus egestas orci. Maecenas tempor orci eget neque pretium varius. In placerat, elit a ultricies egestas, ante urna dapibus sem, in posuere odio dui quis dolor. Nulla sollicitudin vulputate ligula eu volutpat. Phasellus faucibus mi quis bibendum aliquet. Vestibulum viverra vel nunc ut porttitor. Sed id finibus justo, id venenatis lacus. Etiam eget velit eu neque interdum feugiat. Vestibulum quis tincidunt ipsum, eu bibendum nisl. Vestibulum ut risus lacus. Pellentesque varius, erat ut consequat maximus, augue sapien molestie diam, nec pellentesque odio quam sit amet sem. Pellentesque condimentum mi nec vulputate euismod. Phasellus faucibus non lorem in viverra. Etiam vehicula ante vitae leo euismod gravida. Integer venenatis sodales lacinia.</p>
+				<p>Sed consectetur urna ac lectus facilisis, et viverra eros lobortis. Nulla sodales ligula eu tortor consequat, id congue erat rhoncus. Cras sed finibus purus. Aliquam eros enim, porta quis bibendum vitae, ullamcorper vitae ligula. Etiam eu fermentum felis. Aenean fermentum nulla in odio congue convallis. Aenean pulvinar eros cursus posuere venenatis. Sed ultrices rhoncus mi, in tempor sem sollicitudin lacinia. Vestibulum vitae ipsum imperdiet, placerat erat et, consectetur odio. Vestibulum posuere sapien dui, vel commodo tortor semper eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas laoreet, metus sit amet euismod maximus, ex quam pellentesque est, vel efficitur felis lorem nec orci. Vestibulum efficitur ullamcorper egestas. Vivamus vehicula at sem et tincidunt.</p>
+				<p>Fusce sapien metus, placerat a felis imperdiet, sodales egestas felis. Donec convallis purus at mi blandit aliquet. Suspendisse ultrices ac massa et lobortis. In maximus, lorem fermentum iaculis congue, elit nulla imperdiet arcu, quis congue lacus nibh non libero. Etiam porttitor hendrerit dignissim. Mauris mattis enim magna, at tempus quam tincidunt eu. Nam porta erat eget tortor aliquam egestas. Nam volutpat posuere enim sed vehicula. In faucibus magna orci, eu consequat nisl iaculis ut. Proin felis turpis, bibendum eget libero quis, viverra auctor lorem. Donec maximus vitae sapien vel tincidunt. Aliquam lacinia nibh et ligula sodales, non malesuada risus aliquet. Etiam bibendum eros est, id ultrices ipsum consectetur in. Etiam id sagittis mi, sit amet interdum justo.</p>
+				<p>Quisque venenatis ultricies elit sit amet fringilla. Curabitur tristique quis sapien vel finibus. Integer congue urna turpis, ut posuere erat suscipit at. Suspendisse ac diam diam. Morbi imperdiet ligula ut mauris interdum, sit amet tincidunt turpis vehicula. Mauris scelerisque imperdiet nisi sed hendrerit. Curabitur interdum imperdiet feugiat. Suspendisse semper arcu risus, non tristique lectus euismod at. Cras mattis sagittis egestas. Morbi sagittis fringilla lacus vitae pellentesque. Vivamus elementum pharetra sagittis. Mauris venenatis magna vel imperdiet scelerisque. Duis condimentum velit nec nibh cursus mollis.</p>
+				</div>
+				<div id="mask">
+				</div>
+				<footer>
+					<div>
+						<audio autoplay="autoplay" controls="controls" loop="loop">
+							<source src="tubbers__waltz-carulli-partial.mp3" type="audio/mpeg">
+							<source src="tubbers__waltz-carulli-partial.ogg" type="audio/ogg">
+							Your browser does not support the audio element.
+						</audio><br>
+						<a href="index.html">HOME</a> / <a href="details.html">DETAILS</a> / <a href="history.html">HISTORY</a> / <a href="rsvp.html">RSVP</a> / <a href="contact.html">CONTACT US</a>
+					</div>
+				</footer>
+			</main>
+		</div>
+	</div>
+</body>	

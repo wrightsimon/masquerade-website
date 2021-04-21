@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Masquerade of a Lifetime</title>
+	<meta charset="etf-8">
+	<link rel="stylesheet" href="css/masquerade.css" type="text/css" media="screen">
+	<script>
+		/* Set the countdown date */	var countDownDate = new Date("Oct 13, 2018 19:00:00").getTime();
+		/* Update the clock every second */	var x = setInterval(function() {
+			/* Get the current date and time */	var now = new Date().getTime();
+			/* Find the distance between now and the final date */	var distance = countDownDate - now;
+			/* Calculate time for days */ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			/* Calculate time for hours */	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			/* Calculate time for minutes */	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			/* Calculate time for seconds */	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			/* Display the result in the element "clock" */	document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+			/* If the countdown is finished, write a message */	
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("clock").innerHTML = "The ball has passed, see you next year.";
+				}
+			}, 1000);
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="banner"><h1>95th Annual Talverton Masquerade</h1></div>
+		</header>
+		<div id="demo">
+			<nav><ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a class="active" href="details.html">Event Details</a></li>
+				<li><a href="history.html">Event History</a></li>
+				<li><a href="rsvp.html">RSVP</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="featureindex.html">Feature Index</a></li>
+			</ul></nav>
+			<aside>
+				<p>Greetings honored guest, the ball begins in</p>
+				<p id="clock"></p>
+			</aside>
+			<main>
+				<div id="mask">
+				</div>
+				<h2>When</h2>
+				<p>October 13, 1545</p>
+				<h2>Where</h2>
+				<video controls="controls" poster="Winterfell.jpg" height="240" width="320" loop="loop">
+					<source src="Winterfell.mp4" type="video/mp4">
+					<source src="Winterfell.ogv" type="video/ogg">
+				</video>
+				<p>9956 Mountainview Ave.<br>
+					Talverton, IN 06066</p>
+				<h2>What should you bring?</h2>
+				<dl>
+					<dt>Appropriate Attire</dt>
+						<dd>Talverton Masquerade guests must appear in either full costume or in formal attire with a mask.</dd>
+					<dt>Your best dancing shoes</dt>
+						<dd>Ensure you come prepared to dance all night. This does include knowing how to dance; if you don't know how, here is a <a class="weblink" href="https://www.wikihow.com/Dance-the-Waltz">guide</a>.
+					<dt>Your Largest Apetite</dt>
+						<dd>The halls of Sencoss Manor will be filled to the brim with a bountiful feast.</dd>
+					<dt>Lorem ipsum dolor sit amet</dt>
+						<dd>Duis sollicitudin turpis nec nisl consequat, sit amet vestibulum arcu maximus.</dd>
+					<dt>Aliquam vitae felis tempor</dt>
+						<dd>Fusce sit amet tincidunt neque, vitae molestie lorem.</dd>
+					<dt>Vivamus ut lacus eget lectus</dt>
+						<dd>Donec ultrices luctus augue, sit amet mollis eros sagittis non.</dd>
+				</dl>
+				<div id="mask">
+				</div>
+			</main>
+		</div>
+		<footer>
+			<div>
+				<audio autoplay="autoplay" controls="controls" loop="loop">
+					<source src="tubbers__waltz-carulli-partial.mp3" type="audio/mpeg">
+					<source src="tubbers__waltz-carulli-partial.ogg" type="audio/ogg">
+					Your browser does not support the audio element.
+				</audio><br>
+				<a href="index.html">HOME</a> / <a href="details.html">DETAILS</a> / <a href="history.html">HISTORY</a> / <a href="rsvp.html">RSVP</a> / <a href="contact.html">CONTACT US</a>
+			</div>
+		</footer>
+	</div>
+</body>
